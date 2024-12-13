@@ -1,1 +1,29 @@
+Testar novos cenários:
+
+Edite os predicados initial_state e final_state no arquivo para representar novos cenários.
+
+Exemplo:
+
+initial_state([clear(2), clear(3), on(a, 1), on(b, a)]).
+final_state([on(a, 2), on(b, 3)]).
+
+
+Testar estados alternativos manualmente:
+
+Use o predicado plan/4 diretamente para testar estados específicos:
+
+?- plan([clear(2), clear(3), on(a,1), on(b,a)], [on(a,2), on(b,3)], Plan, FinalState).
+
+
+Substitua os estados inicial e final conforme necessário. O Prolog gerará a sequência de ações (Plan) e o estado final alcançado (FinalState).
+
+
+Personalizar ações e condições:
+
+Adicione novos blocos ou condições no código, como:
+
+block(e).
+place(5).
+
+Atualize as definições de estado inicial e final para refletir as mudanças.
 
